@@ -238,6 +238,9 @@
                                     <segment title="사원"/>
                                     <segment title="부서"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changedEntityType:" destination="XVW-lP-Bqf" eventType="valueChanged" id="0Mm-Fu-5QP"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijx-P7-iUy">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -248,17 +251,46 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="remove:" destination="XVW-lP-Bqf" eventType="touchUpInside" id="i6X-W3-8tc"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-zF-Dqy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="gpu-at-lWI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-72-7sY">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="isG-yK-qd2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rTz-zF-Dqy" firstAttribute="top" secondItem="iFi-LA-dCK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5jB-ZP-sBm"/>
                             <constraint firstAttribute="trailing" secondItem="Ijx-P7-iUy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JvH-In-ZXp"/>
+                            <constraint firstItem="eE1-72-7sY" firstAttribute="centerX" secondItem="bUg-vQ-Dbi" secondAttribute="centerX" type="default" id="U2b-dY-xZI"/>
+                            <constraint firstItem="eE1-72-7sY" firstAttribute="leading" secondItem="rTz-zF-Dqy" secondAttribute="leading" type="default" id="U84-yS-MXe"/>
+                            <constraint firstItem="eE1-72-7sY" firstAttribute="trailing" secondItem="rTz-zF-Dqy" secondAttribute="trailing" type="default" id="WaJ-sD-ed9"/>
                             <constraint firstItem="iFi-LA-dCK" firstAttribute="top" secondItem="bUg-vQ-Dbi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cnk-MG-z9W"/>
+                            <constraint firstItem="rTz-zF-Dqy" firstAttribute="centerX" secondItem="iFi-LA-dCK" secondAttribute="centerX" type="default" id="eQI-Vn-ObJ"/>
                             <constraint firstItem="Ijx-P7-iUy" firstAttribute="top" secondItem="bUg-vQ-Dbi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="f7B-Qz-85O"/>
-                            <constraint firstItem="iFi-LA-dCK" firstAttribute="centerX" secondItem="bUg-vQ-Dbi" secondAttribute="centerX" type="default" id="nBd-Yh-gq4"/>
+                            <constraint firstItem="eE1-72-7sY" firstAttribute="top" secondItem="rTz-zF-Dqy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="s6f-ZL-LBd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="삭제" id="AXX-e5-ujn"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="Ijx-P7-iUy" id="tYd-cg-Vfi"/>
+                        <outlet property="entityType" destination="iFi-LA-dCK" id="icd-Q9-4aK"/>
+                        <outlet property="resultTextView" destination="eE1-72-7sY" id="ef9-6e-M5l"/>
+                        <outlet property="targetText" destination="rTz-zF-Dqy" id="yL4-aA-BVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGk-cK-4hQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,6 +327,14 @@
         </class>
         <class className="ManpowerDeleteViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerDeleteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changedEntityType:"/>
+                <relationship kind="action" name="remove:"/>
+                <relationship kind="outlet" name="deleteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="entityType" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="resultTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="targetText" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="ManpowerSearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerSearchViewController.h"/>

@@ -86,4 +86,5 @@
         [self.searchButton setHidden:YES];
     }
 }
+
 @end
