@@ -11,4 +11,12 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import "Employee.h"
+    #import "Department.h"
+
+    enum ManpowerEntityType {
+        ManpowerEntityTypeEmployee = 0,
+        ManpowerEntityTypeDepartment = 1
+    };
 #endif

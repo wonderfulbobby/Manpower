@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D944680617BDC7ED008472DC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D944680517BDC7ED008472DC /* CoreData.framework */; };
+		D944683717BDCDB1008472DC /* Manpower.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D944683517BDCDB1008472DC /* Manpower.xcdatamodeld */; };
+		D944683A17BDE02F008472DC /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = D944683917BDE02F008472DC /* Department.m */; };
+		D944683D17BDE04B008472DC /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = D944683C17BDE04B008472DC /* Employee.m */; };
 		D95DE29217BCB8C90072FA52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95DE29117BCB8C90072FA52 /* UIKit.framework */; };
 		D95DE29417BCB8C90072FA52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95DE29317BCB8C90072FA52 /* Foundation.framework */; };
 		D95DE29617BCB8C90072FA52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95DE29517BCB8C90072FA52 /* CoreGraphics.framework */; };
@@ -24,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D944680517BDC7ED008472DC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D944683617BDCDB1008472DC /* Manpower.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Manpower.xcdatamodel; sourceTree = "<group>"; };
+		D944683817BDE02F008472DC /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
+		D944683917BDE02F008472DC /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
+		D944683B17BDE04B008472DC /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		D944683C17BDE04B008472DC /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		D95DE28E17BCB8C90072FA52 /* Manpower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manpower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95DE29117BCB8C90072FA52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D95DE29317BCB8C90072FA52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944680617BDC7ED008472DC /* CoreData.framework in Frameworks */,
 				D95DE29217BCB8C90072FA52 /* UIKit.framework in Frameworks */,
 				D95DE29417BCB8C90072FA52 /* Foundation.framework in Frameworks */,
 				D95DE29617BCB8C90072FA52 /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +93,7 @@
 		D95DE29017BCB8C90072FA52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D944680517BDC7ED008472DC /* CoreData.framework */,
 				D95DE29117BCB8C90072FA52 /* UIKit.framework */,
 				D95DE29317BCB8C90072FA52 /* Foundation.framework */,
 				D95DE29517BCB8C90072FA52 /* CoreGraphics.framework */,
@@ -95,6 +107,7 @@
 				D95DE2A017BCB8C90072FA52 /* ManpowerAppDelegate.h */,
 				D95DE2A117BCB8C90072FA52 /* ManpowerAppDelegate.m */,
 				D95DE2A917BCB8C90072FA52 /* MainStoryboard.storyboard */,
+				D944683517BDCDB1008472DC /* Manpower.xcdatamodeld */,
 				D95DE2AC17BCB8C90072FA52 /* ManpowerViewController.h */,
 				D95DE2AD17BCB8C90072FA52 /* ManpowerViewController.m */,
 				D95DE2B417BCC2100072FA52 /* ManpowerSearchViewController.h */,
@@ -103,6 +116,10 @@
 				D95DE2B817BCC2260072FA52 /* ManpowerAddViewController.m */,
 				D95DE2BA17BCC2350072FA52 /* ManpowerDeleteViewController.h */,
 				D95DE2BB17BCC2350072FA52 /* ManpowerDeleteViewController.m */,
+				D944683B17BDE04B008472DC /* Employee.h */,
+				D944683C17BDE04B008472DC /* Employee.m */,
+				D944683817BDE02F008472DC /* Department.h */,
+				D944683917BDE02F008472DC /* Department.m */,
 				D95DE29817BCB8C90072FA52 /* Supporting Files */,
 			);
 			path = Manpower;
@@ -195,6 +212,9 @@
 				D95DE2B617BCC2100072FA52 /* ManpowerSearchViewController.m in Sources */,
 				D95DE2B917BCC2260072FA52 /* ManpowerAddViewController.m in Sources */,
 				D95DE2BC17BCC2350072FA52 /* ManpowerDeleteViewController.m in Sources */,
+				D944683717BDCDB1008472DC /* Manpower.xcdatamodeld in Sources */,
+				D944683A17BDE02F008472DC /* Department.m in Sources */,
+				D944683D17BDE04B008472DC /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +340,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D944683517BDCDB1008472DC /* Manpower.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D944683617BDCDB1008472DC /* Manpower.xcdatamodel */,
+			);
+			currentVersion = D944683617BDCDB1008472DC /* Manpower.xcdatamodel */;
+			path = Manpower.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D95DE28617BCB8C90072FA52 /* Project object */;
 }

@@ -14,8 +14,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm0-vH-F9U">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="I4e-nS-cuL"/>
-                                    <constraint firstAttribute="height" constant="79" id="ore-vo-CRO"/>
+                                    <constraint firstAttribute="height" constant="90" id="2V9-OZ-Qqf"/>
+                                    <constraint firstAttribute="width" constant="90" id="Cjc-HH-Q4A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="검색">
@@ -31,7 +31,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-kY-GVW">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="cWA-Mw-i3J"/>
+                                    <constraint firstAttribute="height" constant="90" id="6tX-PH-Atb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="삭제">
@@ -57,7 +57,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szQ-xV-SAb">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="Z9u-ri-t3V"/>
+                                    <constraint firstAttribute="width" constant="90" id="Yjw-6F-wZt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="추가">
@@ -74,18 +74,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="szQ-xV-SAb" firstAttribute="bottom" secondItem="rm0-vH-F9U" secondAttribute="bottom" type="default" id="1S6-pV-qf9"/>
                             <constraint firstAttribute="trailing" secondItem="szQ-xV-SAb" secondAttribute="trailing" constant="60" id="4We-b6-Ql1"/>
                             <constraint firstItem="rG0-kY-GVW" firstAttribute="leading" secondItem="rm0-vH-F9U" secondAttribute="leading" type="default" id="5Yd-Vl-RZY"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="leading" secondItem="szQ-xV-SAb" secondAttribute="leading" type="default" id="ADM-ax-ydO"/>
                             <constraint firstItem="dJi-Cu-cRp" firstAttribute="trailing" secondItem="szQ-xV-SAb" secondAttribute="trailing" type="default" id="BOu-TL-b7H"/>
+                            <constraint firstItem="rG0-kY-GVW" firstAttribute="trailing" secondItem="rm0-vH-F9U" secondAttribute="trailing" type="default" id="J1g-K1-buU"/>
                             <constraint firstItem="rm0-vH-F9U" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="61" id="LWj-2d-mIc"/>
-                            <constraint firstItem="rG0-kY-GVW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="166" id="QZ9-mS-GXA"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="top" secondItem="rG0-kY-GVW" secondAttribute="top" type="default" id="Spa-jr-4VU"/>
+                            <constraint firstItem="rm0-vH-F9U" firstAttribute="baseline" secondItem="szQ-xV-SAb" secondAttribute="baseline" type="default" id="ZQb-wE-MEh"/>
                             <constraint firstItem="rm0-vH-F9U" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" id="eEl-wp-IDJ"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="baseline" secondItem="rG0-kY-GVW" secondAttribute="baseline" type="default" id="eKl-Rg-t2s"/>
                             <constraint firstItem="dJi-Cu-cRp" firstAttribute="bottom" secondItem="rG0-kY-GVW" secondAttribute="bottom" type="default" id="eZC-cd-ZyG"/>
-                            <constraint firstItem="rG0-kY-GVW" firstAttribute="trailing" secondItem="rm0-vH-F9U" secondAttribute="trailing" type="default" id="jMB-Hi-dwp"/>
-                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="top" secondItem="rG0-kY-GVW" secondAttribute="top" type="default" id="n8Q-5T-VtQ"/>
+                            <constraint firstItem="szQ-xV-SAb" firstAttribute="bottom" secondItem="rm0-vH-F9U" secondAttribute="bottom" type="default" id="ibw-Zo-0rZ"/>
                             <constraint firstItem="szQ-xV-SAb" firstAttribute="top" secondItem="rm0-vH-F9U" secondAttribute="top" type="default" id="r8s-hS-DeU"/>
-                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="leading" secondItem="szQ-xV-SAb" secondAttribute="leading" type="default" id="xvl-Vx-epw"/>
+                            <constraint firstItem="rG0-kY-GVW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="155" id="y6G-CT-m8x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Manpower" id="OAR-Hh-mgK"/>
@@ -107,6 +109,9 @@
                                     <segment title="사원"/>
                                     <segment title="부서"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changedEntityType:" destination="gzf-Pb-9hO" eventType="valueChanged" id="ajI-TR-un3"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2U-KW-LaG">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -128,11 +133,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="u4l-yC-LMK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4l-yC-LMK">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="IAl-5K-Eng"/>
-                                    <constraint firstAttribute="width" constant="240" id="lD9-nn-uQU"/>
+                                    <constraint firstAttribute="height" constant="98" id="Wyf-1h-yZr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -140,20 +144,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="u4l-yC-LMK" firstAttribute="trailing" secondItem="unU-s3-7WG" secondAttribute="trailing" type="default" id="2O7-UB-h9v"/>
                             <constraint firstItem="EwX-gM-2e3" firstAttribute="top" secondItem="snf-mv-BQY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3AQ-DF-L48"/>
-                            <constraint firstItem="u4l-yC-LMK" firstAttribute="top" secondItem="unU-s3-7WG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7mI-ES-QCn"/>
-                            <constraint firstItem="u4l-yC-LMK" firstAttribute="centerX" secondItem="unU-s3-7WG" secondAttribute="centerX" type="default" id="Mor-Ee-Azg"/>
+                            <constraint firstItem="unU-s3-7WG" firstAttribute="centerX" secondItem="snf-mv-BQY" secondAttribute="centerX" type="default" id="7wv-8q-a2x"/>
                             <constraint firstItem="Y2U-KW-LaG" firstAttribute="top" secondItem="snf-mv-BQY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OHK-cP-oiU"/>
+                            <constraint firstItem="EwX-gM-2e3" firstAttribute="leading" secondItem="snf-mv-BQY" secondAttribute="leading" constant="113" id="Zpf-fD-69q"/>
                             <constraint firstAttribute="trailing" secondItem="Y2U-KW-LaG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="e8R-nl-KT6"/>
-                            <constraint firstItem="u4l-yC-LMK" firstAttribute="centerY" secondItem="snf-mv-BQY" secondAttribute="centerY" type="default" id="eKw-g0-ibG"/>
-                            <constraint firstItem="unU-s3-7WG" firstAttribute="centerX" secondItem="snf-mv-BQY" secondAttribute="centerX" type="default" id="kC4-Zg-nFh"/>
-                            <constraint firstItem="unU-s3-7WG" firstAttribute="centerX" secondItem="EwX-gM-2e3" secondAttribute="centerX" type="default" id="qe5-YG-eKE"/>
+                            <constraint firstItem="unU-s3-7WG" firstAttribute="top" secondItem="EwX-gM-2e3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="r9K-RZ-mID"/>
+                            <constraint firstItem="u4l-yC-LMK" firstAttribute="leading" secondItem="unU-s3-7WG" secondAttribute="leading" type="default" id="sW5-cp-b6g"/>
+                            <constraint firstItem="u4l-yC-LMK" firstAttribute="top" secondItem="unU-s3-7WG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vN8-Lh-Ifc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="검색" id="7LA-ms-ml1"/>
                     <connections>
                         <outlet property="entityType" destination="EwX-gM-2e3" id="Kzb-Hv-IcP"/>
                         <outlet property="resultTextView" destination="u4l-yC-LMK" id="a9K-cM-kMJ"/>
+                        <outlet property="searchButton" destination="Y2U-KW-LaG" id="kEV-iY-WLY"/>
                         <outlet property="searchDisplayController" destination="V9S-lr-jsQ" id="dDO-xT-Jwv"/>
                         <outlet property="searchText" destination="unU-s3-7WG" id="Yzz-KS-2QY"/>
                     </connections>
@@ -293,9 +299,11 @@
         <class className="ManpowerSearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerSearchViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changedEntityType:"/>
                 <relationship kind="action" name="search:"/>
                 <relationship kind="outlet" name="entityType" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="resultTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="searchButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="searchText" candidateClass="UITextField"/>
             </relationships>
         </class>

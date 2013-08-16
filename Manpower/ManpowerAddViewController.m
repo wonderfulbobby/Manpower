@@ -28,13 +28,11 @@
     
     [self.addButton setHidden:YES];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTextField) name:UITextFieldTextDidChangeNotification object:self.employeeNumber];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTextField) name:UITextFieldTextDidChangeNotification object:self.employeeName];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTextField) name:UITextFieldTextDidChangeNotification object:self.departmentNameForEmployee];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkTextField) name:UITextFieldTextDidChangeNotification object:nil];
     
-    if (self.entityType.selectedSegmentIndex == 0) {
+    if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
         [self makeEmployeeInfoInputView];
-    } else if (self.entityType.selectedSegmentIndex == 1) {
+    } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
         [self makeDepartmentInfoInputView];
     }
 }
@@ -98,6 +96,27 @@
 }
 
 - (IBAction)add:(id)sender {
+    ManpowerAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSError *error;
+    
+    if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
+        Employee *newEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
+        [newEmployee setNumber:self.employeeNumber.text];
+        [newEmployee setName:self.employeeName.text];
+        [newEmployee setDepartmentName:self.departmentNameForEmployee.text];
+    } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
+        Department *newDepartment = [NSEntityDescription insertNewObjectForEntityForName:@"Department" inManagedObjectContext:context];
+        [newDepartment setNumber:self.departmentNumber.text];
+        [newDepartment setName:self.departmentName.text];
+    }
+    
+    [context save:&error];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"추가되었습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+    [alertView show];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)changedEntityType:(id)sender {    
@@ -109,21 +128,21 @@
     
     [self.addButton setHidden:YES];
     
-    if (self.entityType.selectedSegmentIndex == 0) {
+    if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
         [self makeEmployeeInfoInputView];
-    } else if (self.entityType.selectedSegmentIndex == 1) {
+    } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
         [self makeDepartmentInfoInputView];
     }
 }
 
 - (void)checkTextField {
-    if (self.entityType.selectedSegmentIndex == 0) {
+    if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
         if (self.employeeNumber.text.length > 0 && self.employeeName.text.length > 0 && self.departmentNameForEmployee.text.length > 0) {
             [self.addButton setHidden:NO];
         } else {
             [self.addButton setHidden:YES];
         }
-    } else if (self.entityType.selectedSegmentIndex == 1) {
+    } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
         if (self.departmentNumber.text.length > 0 && self.departmentName.text.length > 0) {
             [self.addButton setHidden:NO];
         } else {

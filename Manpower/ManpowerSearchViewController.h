@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ManpowerAppDelegate.h"
 
 @interface ManpowerSearchViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *entityType;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
 @property (strong, nonatomic) IBOutlet UITextField *searchText;
 @property (strong, nonatomic) IBOutlet UITextView *resultTextView;
 
 - (IBAction)search:(id)sender;
+- (IBAction)changedEntityType:(id)sender;
 
 @end

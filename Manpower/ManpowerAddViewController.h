@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ManpowerAppDelegate.h"
 
 @interface ManpowerAddViewController : UIViewController<UITextFieldDelegate>
 
