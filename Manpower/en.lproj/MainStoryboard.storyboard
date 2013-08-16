@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b53-wE-jza">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Manpower View Controller - Manpower-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ManpowerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm0-vH-F9U">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="I4e-nS-cuL"/>
+                                    <constraint firstAttribute="height" constant="79" id="ore-vo-CRO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="검색">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gzf-Pb-9hO" kind="push" id="rqF-f8-VPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG0-kY-GVW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="cWA-Mw-i3J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="삭제">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XVW-lP-Bqf" kind="push" id="trp-Yz-2Vi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-Cu-cRp">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="설정">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szQ-xV-SAb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="Z9u-ri-t3V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="추가">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Bb-kV-JTf" kind="push" id="hqs-0M-ZOT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="szQ-xV-SAb" firstAttribute="bottom" secondItem="rm0-vH-F9U" secondAttribute="bottom" type="default" id="1S6-pV-qf9"/>
+                            <constraint firstAttribute="trailing" secondItem="szQ-xV-SAb" secondAttribute="trailing" constant="60" id="4We-b6-Ql1"/>
+                            <constraint firstItem="rG0-kY-GVW" firstAttribute="leading" secondItem="rm0-vH-F9U" secondAttribute="leading" type="default" id="5Yd-Vl-RZY"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="trailing" secondItem="szQ-xV-SAb" secondAttribute="trailing" type="default" id="BOu-TL-b7H"/>
+                            <constraint firstItem="rm0-vH-F9U" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="61" id="LWj-2d-mIc"/>
+                            <constraint firstItem="rG0-kY-GVW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="166" id="QZ9-mS-GXA"/>
+                            <constraint firstItem="rm0-vH-F9U" firstAttribute="top" secondItem="3" secondAttribute="top" constant="47" id="eEl-wp-IDJ"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="bottom" secondItem="rG0-kY-GVW" secondAttribute="bottom" type="default" id="eZC-cd-ZyG"/>
+                            <constraint firstItem="rG0-kY-GVW" firstAttribute="trailing" secondItem="rm0-vH-F9U" secondAttribute="trailing" type="default" id="jMB-Hi-dwp"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="top" secondItem="rG0-kY-GVW" secondAttribute="top" type="default" id="n8Q-5T-VtQ"/>
+                            <constraint firstItem="szQ-xV-SAb" firstAttribute="top" secondItem="rm0-vH-F9U" secondAttribute="top" type="default" id="r8s-hS-DeU"/>
+                            <constraint firstItem="dJi-Cu-cRp" firstAttribute="leading" secondItem="szQ-xV-SAb" secondAttribute="leading" type="default" id="xvl-Vx-epw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manpower" id="OAR-Hh-mgK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1117" y="-638"/>
+        </scene>
+        <!--Manpower Search View Controller - 검색-->
+        <scene sceneID="IuH-Yb-ChN">
+            <objects>
+                <viewController id="gzf-Pb-9hO" customClass="ManpowerSearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="snf-mv-BQY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-gM-2e3">
+                                <segments>
+                                    <segment title="사원"/>
+                                    <segment title="부서"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2U-KW-LaG">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="검색">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="search:" destination="gzf-Pb-9hO" eventType="touchUpInside" id="Fu3-6p-NYr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unU-s3-7WG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="lMz-PO-7M4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="u4l-yC-LMK">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="IAl-5K-Eng"/>
+                                    <constraint firstAttribute="width" constant="240" id="lD9-nn-uQU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EwX-gM-2e3" firstAttribute="top" secondItem="snf-mv-BQY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3AQ-DF-L48"/>
+                            <constraint firstItem="u4l-yC-LMK" firstAttribute="top" secondItem="unU-s3-7WG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7mI-ES-QCn"/>
+                            <constraint firstItem="u4l-yC-LMK" firstAttribute="centerX" secondItem="unU-s3-7WG" secondAttribute="centerX" type="default" id="Mor-Ee-Azg"/>
+                            <constraint firstItem="Y2U-KW-LaG" firstAttribute="top" secondItem="snf-mv-BQY" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OHK-cP-oiU"/>
+                            <constraint firstAttribute="trailing" secondItem="Y2U-KW-LaG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="e8R-nl-KT6"/>
+                            <constraint firstItem="u4l-yC-LMK" firstAttribute="centerY" secondItem="snf-mv-BQY" secondAttribute="centerY" type="default" id="eKw-g0-ibG"/>
+                            <constraint firstItem="unU-s3-7WG" firstAttribute="centerX" secondItem="snf-mv-BQY" secondAttribute="centerX" type="default" id="kC4-Zg-nFh"/>
+                            <constraint firstItem="unU-s3-7WG" firstAttribute="centerX" secondItem="EwX-gM-2e3" secondAttribute="centerX" type="default" id="qe5-YG-eKE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="검색" id="7LA-ms-ml1"/>
+                    <connections>
+                        <outlet property="entityType" destination="EwX-gM-2e3" id="Kzb-Hv-IcP"/>
+                        <outlet property="resultTextView" destination="u4l-yC-LMK" id="a9K-cM-kMJ"/>
+                        <outlet property="searchDisplayController" destination="V9S-lr-jsQ" id="dDO-xT-Jwv"/>
+                        <outlet property="searchText" destination="unU-s3-7WG" id="Yzz-KS-2QY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="547-kk-tOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="V9S-lr-jsQ">
+                    <connections>
+                        <outlet property="delegate" destination="gzf-Pb-9hO" id="E9R-Kb-vhD"/>
+                        <outlet property="searchContentsController" destination="gzf-Pb-9hO" id="q8G-89-2MX"/>
+                        <outlet property="searchResultsDataSource" destination="gzf-Pb-9hO" id="Ofn-8J-VOv"/>
+                        <outlet property="searchResultsDelegate" destination="gzf-Pb-9hO" id="J5p-7R-me2"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-636" y="-638"/>
+        </scene>
+        <!--Manpower Add View Controller - 추가-->
+        <scene sceneID="WSS-ND-rYh">
+            <objects>
+                <viewController id="7Bb-kV-JTf" customClass="ManpowerAddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwZ-CU-9ai">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="swo-Uj-Ago">
+                                <segments>
+                                    <segment title="사원"/>
+                                    <segment title="부서"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changedEntityType:" destination="7Bb-kV-JTf" eventType="valueChanged" id="o9M-dU-hyb"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OI-h3-6fU">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="추가">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="7Bb-kV-JTf" eventType="touchUpInside" id="qfo-eu-JbP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6OI-h3-6fU" secondAttribute="trailing" constant="30" id="MP5-i4-ddF"/>
+                            <constraint firstItem="swo-Uj-Ago" firstAttribute="top" secondItem="6OI-h3-6fU" secondAttribute="top" type="default" id="PlI-a2-jmu"/>
+                            <constraint firstItem="swo-Uj-Ago" firstAttribute="top" secondItem="nwZ-CU-9ai" secondAttribute="top" constant="10" id="rhc-G7-GLB"/>
+                            <constraint firstItem="swo-Uj-Ago" firstAttribute="centerX" secondItem="nwZ-CU-9ai" secondAttribute="centerX" type="default" id="uQ7-cv-4Dt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="추가" id="LM8-wg-l6c"/>
+                    <connections>
+                        <outlet property="addButton" destination="6OI-h3-6fU" id="ecJ-7m-9Wk"/>
+                        <outlet property="entityType" destination="swo-Uj-Ago" id="xHa-Hf-C9k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWx-GQ-iTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-636" y="83"/>
+        </scene>
+        <!--Manpower Delete View Controller - 삭제-->
+        <scene sceneID="Bgb-ye-Kmk">
+            <objects>
+                <viewController id="XVW-lP-Bqf" customClass="ManpowerDeleteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bUg-vQ-Dbi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iFi-LA-dCK">
+                                <segments>
+                                    <segment title="사원"/>
+                                    <segment title="부서"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijx-P7-iUy">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="삭제">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ijx-P7-iUy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JvH-In-ZXp"/>
+                            <constraint firstItem="iFi-LA-dCK" firstAttribute="top" secondItem="bUg-vQ-Dbi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cnk-MG-z9W"/>
+                            <constraint firstItem="Ijx-P7-iUy" firstAttribute="top" secondItem="bUg-vQ-Dbi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="f7B-Qz-85O"/>
+                            <constraint firstItem="iFi-LA-dCK" firstAttribute="centerX" secondItem="bUg-vQ-Dbi" secondAttribute="centerX" type="default" id="nBd-Yh-gq4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="삭제" id="AXX-e5-ujn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGk-cK-4hQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-636" y="801"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iOX-zt-spL">
+            <objects>
+                <navigationController id="b53-wE-jza" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3JT-Fs-15c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="c49-dA-Bqf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDg-q1-XGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1599" y="-638"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ManpowerAddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerAddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="add:"/>
+                <relationship kind="action" name="changedEntityType:"/>
+                <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="entityType" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="ManpowerDeleteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerDeleteViewController.h"/>
+        </class>
+        <class className="ManpowerSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerSearchViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="search:"/>
+                <relationship kind="outlet" name="entityType" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="resultTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="searchText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ManpowerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ManpowerViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

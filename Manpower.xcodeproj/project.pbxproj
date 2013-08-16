@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D95DE29217BCB8C90072FA52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95DE29117BCB8C90072FA52 /* UIKit.framework */; };
+		D95DE29417BCB8C90072FA52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95DE29317BCB8C90072FA52 /* Foundation.framework */; };
+		D95DE29617BCB8C90072FA52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95DE29517BCB8C90072FA52 /* CoreGraphics.framework */; };
+		D95DE29C17BCB8C90072FA52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D95DE29A17BCB8C90072FA52 /* InfoPlist.strings */; };
+		D95DE29E17BCB8C90072FA52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D95DE29D17BCB8C90072FA52 /* main.m */; };
+		D95DE2A217BCB8C90072FA52 /* ManpowerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D95DE2A117BCB8C90072FA52 /* ManpowerAppDelegate.m */; };
+		D95DE2A417BCB8C90072FA52 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D95DE2A317BCB8C90072FA52 /* Default.png */; };
+		D95DE2A617BCB8C90072FA52 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D95DE2A517BCB8C90072FA52 /* Default@2x.png */; };
+		D95DE2A817BCB8C90072FA52 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D95DE2A717BCB8C90072FA52 /* Default-568h@2x.png */; };
+		D95DE2AB17BCB8C90072FA52 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95DE2A917BCB8C90072FA52 /* MainStoryboard.storyboard */; };
+		D95DE2AE17BCB8C90072FA52 /* ManpowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95DE2AD17BCB8C90072FA52 /* ManpowerViewController.m */; };
+		D95DE2B617BCC2100072FA52 /* ManpowerSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95DE2B517BCC2100072FA52 /* ManpowerSearchViewController.m */; };
+		D95DE2B917BCC2260072FA52 /* ManpowerAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95DE2B817BCC2260072FA52 /* ManpowerAddViewController.m */; };
+		D95DE2BC17BCC2350072FA52 /* ManpowerDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95DE2BB17BCC2350072FA52 /* ManpowerDeleteViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D95DE28E17BCB8C90072FA52 /* Manpower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manpower.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95DE29117BCB8C90072FA52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D95DE29317BCB8C90072FA52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D95DE29517BCB8C90072FA52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D95DE29917BCB8C90072FA52 /* Manpower-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Manpower-Info.plist"; sourceTree = "<group>"; };
+		D95DE29B17BCB8C90072FA52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D95DE29D17BCB8C90072FA52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D95DE29F17BCB8C90072FA52 /* Manpower-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Manpower-Prefix.pch"; sourceTree = "<group>"; };
+		D95DE2A017BCB8C90072FA52 /* ManpowerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManpowerAppDelegate.h; sourceTree = "<group>"; };
+		D95DE2A117BCB8C90072FA52 /* ManpowerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManpowerAppDelegate.m; sourceTree = "<group>"; };
+		D95DE2A317BCB8C90072FA52 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D95DE2A517BCB8C90072FA52 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D95DE2A717BCB8C90072FA52 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D95DE2AA17BCB8C90072FA52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D95DE2AC17BCB8C90072FA52 /* ManpowerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManpowerViewController.h; sourceTree = "<group>"; };
+		D95DE2AD17BCB8C90072FA52 /* ManpowerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManpowerViewController.m; sourceTree = "<group>"; };
+		D95DE2B417BCC2100072FA52 /* ManpowerSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManpowerSearchViewController.h; sourceTree = "<group>"; };
+		D95DE2B517BCC2100072FA52 /* ManpowerSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManpowerSearchViewController.m; sourceTree = "<group>"; };
+		D95DE2B717BCC2260072FA52 /* ManpowerAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManpowerAddViewController.h; sourceTree = "<group>"; };
+		D95DE2B817BCC2260072FA52 /* ManpowerAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManpowerAddViewController.m; sourceTree = "<group>"; };
+		D95DE2BA17BCC2350072FA52 /* ManpowerDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManpowerDeleteViewController.h; sourceTree = "<group>"; };
+		D95DE2BB17BCC2350072FA52 /* ManpowerDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManpowerDeleteViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D95DE28B17BCB8C90072FA52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95DE29217BCB8C90072FA52 /* UIKit.framework in Frameworks */,
+				D95DE29417BCB8C90072FA52 /* Foundation.framework in Frameworks */,
+				D95DE29617BCB8C90072FA52 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D95DE28517BCB8C90072FA52 = {
+			isa = PBXGroup;
+			children = (
+				D95DE29717BCB8C90072FA52 /* Manpower */,
+				D95DE29017BCB8C90072FA52 /* Frameworks */,
+				D95DE28F17BCB8C90072FA52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D95DE28F17BCB8C90072FA52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D95DE28E17BCB8C90072FA52 /* Manpower.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D95DE29017BCB8C90072FA52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D95DE29117BCB8C90072FA52 /* UIKit.framework */,
+				D95DE29317BCB8C90072FA52 /* Foundation.framework */,
+				D95DE29517BCB8C90072FA52 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D95DE29717BCB8C90072FA52 /* Manpower */ = {
+			isa = PBXGroup;
+			children = (
+				D95DE2A017BCB8C90072FA52 /* ManpowerAppDelegate.h */,
+				D95DE2A117BCB8C90072FA52 /* ManpowerAppDelegate.m */,
+				D95DE2A917BCB8C90072FA52 /* MainStoryboard.storyboard */,
+				D95DE2AC17BCB8C90072FA52 /* ManpowerViewController.h */,
+				D95DE2AD17BCB8C90072FA52 /* ManpowerViewController.m */,
+				D95DE2B417BCC2100072FA52 /* ManpowerSearchViewController.h */,
+				D95DE2B517BCC2100072FA52 /* ManpowerSearchViewController.m */,
+				D95DE2B717BCC2260072FA52 /* ManpowerAddViewController.h */,
+				D95DE2B817BCC2260072FA52 /* ManpowerAddViewController.m */,
+				D95DE2BA17BCC2350072FA52 /* ManpowerDeleteViewController.h */,
+				D95DE2BB17BCC2350072FA52 /* ManpowerDeleteViewController.m */,
+				D95DE29817BCB8C90072FA52 /* Supporting Files */,
+			);
+			path = Manpower;
+			sourceTree = "<group>";
+		};
+		D95DE29817BCB8C90072FA52 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D95DE29917BCB8C90072FA52 /* Manpower-Info.plist */,
+				D95DE29A17BCB8C90072FA52 /* InfoPlist.strings */,
+				D95DE29D17BCB8C90072FA52 /* main.m */,
+				D95DE29F17BCB8C90072FA52 /* Manpower-Prefix.pch */,
+				D95DE2A317BCB8C90072FA52 /* Default.png */,
+				D95DE2A517BCB8C90072FA52 /* Default@2x.png */,
+				D95DE2A717BCB8C90072FA52 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D95DE28D17BCB8C90072FA52 /* Manpower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95DE2B117BCB8C90072FA52 /* Build configuration list for PBXNativeTarget "Manpower" */;
+			buildPhases = (
+				D95DE28A17BCB8C90072FA52 /* Sources */,
+				D95DE28B17BCB8C90072FA52 /* Frameworks */,
+				D95DE28C17BCB8C90072FA52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Manpower;
+			productName = Manpower;
+			productReference = D95DE28E17BCB8C90072FA52 /* Manpower.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D95DE28617BCB8C90072FA52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Manpower;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Hongcheol Park";
+			};
+			buildConfigurationList = D95DE28917BCB8C90072FA52 /* Build configuration list for PBXProject "Manpower" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D95DE28517BCB8C90072FA52;
+			productRefGroup = D95DE28F17BCB8C90072FA52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D95DE28D17BCB8C90072FA52 /* Manpower */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D95DE28C17BCB8C90072FA52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95DE29C17BCB8C90072FA52 /* InfoPlist.strings in Resources */,
+				D95DE2A417BCB8C90072FA52 /* Default.png in Resources */,
+				D95DE2A617BCB8C90072FA52 /* Default@2x.png in Resources */,
+				D95DE2A817BCB8C90072FA52 /* Default-568h@2x.png in Resources */,
+				D95DE2AB17BCB8C90072FA52 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D95DE28A17BCB8C90072FA52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95DE29E17BCB8C90072FA52 /* main.m in Sources */,
+				D95DE2A217BCB8C90072FA52 /* ManpowerAppDelegate.m in Sources */,
+				D95DE2AE17BCB8C90072FA52 /* ManpowerViewController.m in Sources */,
+				D95DE2B617BCC2100072FA52 /* ManpowerSearchViewController.m in Sources */,
+				D95DE2B917BCC2260072FA52 /* ManpowerAddViewController.m in Sources */,
+				D95DE2BC17BCC2350072FA52 /* ManpowerDeleteViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D95DE29A17BCB8C90072FA52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95DE29B17BCB8C90072FA52 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D95DE2A917BCB8C90072FA52 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95DE2AA17BCB8C90072FA52 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D95DE2AF17BCB8C90072FA52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D95DE2B017BCB8C90072FA52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D95DE2B217BCB8C90072FA52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Manpower/Manpower-Prefix.pch";
+				INFOPLIST_FILE = "Manpower/Manpower-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D95DE2B317BCB8C90072FA52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Manpower/Manpower-Prefix.pch";
+				INFOPLIST_FILE = "Manpower/Manpower-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D95DE28917BCB8C90072FA52 /* Build configuration list for PBXProject "Manpower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95DE2AF17BCB8C90072FA52 /* Debug */,
+				D95DE2B017BCB8C90072FA52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95DE2B117BCB8C90072FA52 /* Build configuration list for PBXNativeTarget "Manpower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95DE2B217BCB8C90072FA52 /* Debug */,
+				D95DE2B317BCB8C90072FA52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D95DE28617BCB8C90072FA52 /* Project object */;
+}
