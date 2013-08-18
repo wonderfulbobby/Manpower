@@ -10,6 +10,7 @@
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="department" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="employee" inverseEntity="Department" syncable="YES"/>
     </entity>
+    <fetchRequest name="SomeDepartment" entity="Department" predicateString="name == $NAME"/>
     <elements>
         <element name="Department" positionX="351" positionY="207" width="128" height="88"/>
         <element name="Employee" positionX="160" positionY="192" width="128" height="90"/>

@@ -95,12 +95,8 @@
     NSError *error;
     
     if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Department" inManagedObjectContext:context];
-        [request setEntity:entity];
-        
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", self.departmentNameForEmployee.text];
-        [request setPredicate:predicate];
+        NSManagedObjectModel *mom = [appDelegate managedObjectModel];
+        NSFetchRequest *request = [mom fetchRequestFromTemplateWithName:@"SomeDepartment" substitutionVariables:@{@"NAME" : self.departmentNameForEmployee.text}];
         
         NSArray *result = [context executeFetchRequest:request error:&error];
         
