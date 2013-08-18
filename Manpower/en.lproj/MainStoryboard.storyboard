@@ -446,12 +446,12 @@
             </objects>
             <point key="canvasLocation" x="-1911" y="894"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller - 전체검색-->
         <scene sceneID="leC-SO-46j">
             <objects>
                 <tabBarController id="Fjl-Zo-JZe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="RKB-zs-59X"/>
+                    <navigationItem key="navigationItem" title="전체검색" id="RKB-zs-59X"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="25A-ZF-He6">
                         <autoresizingMask key="autoresizingMask"/>

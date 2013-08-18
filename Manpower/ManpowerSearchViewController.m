@@ -40,7 +40,7 @@
         
         if ([result count] > 0) {
             Employee *employee = [result objectAtIndex:0];
-            NSString *resultContent = [NSString stringWithFormat:@"사원번호 : %@\n사원이름 : %@\n부서이름 : %@", employee.number, employee.name, employee.departmentName];
+            NSString *resultContent = [NSString stringWithFormat:@"사원번호 : %@\n사원이름 : %@\n부서이름 : %@", employee.number, employee.name, employee.department.name];
             [self.resultTextView setText:resultContent];
         } else {
             NSString *resultContent = @"데이터가 존재하지 않습니다.";

@@ -1,5 +1,5 @@
 //
-//  ManpowerDepartmentTableViewController.h
+//  ManpowerDepartmentViewController.h
 //  Manpower
 //
 //  Created by Hongcheol Park on 8/17/13.

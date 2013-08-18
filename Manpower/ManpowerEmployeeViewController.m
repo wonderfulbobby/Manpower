@@ -1,5 +1,5 @@
 //
-//  ManpowerSearchAllEmployeeViewController.m
+//  ManpowerEmployeeViewController.m
 //  Manpower
 //
 //  Created by Hongcheol Park on 8/17/13.
@@ -30,7 +30,26 @@
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:context];
+    
     [request setEntity:entity];
+    
+    NSArray *result = [context executeFetchRequest:request error:&error];
+    self.employees = [NSArray arrayWithArray:result];
+}
+
+- (void)searchAllAndSort {
+    ManpowerAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSError *error;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:context];
+    
+    NSSortDescriptor *numberSort = [[NSSortDescriptor alloc] initWithKey:@"number" ascending:YES];
+    NSArray *sorters = [NSArray arrayWithObject:numberSort];
+    
+    [request setEntity:entity];
+    [request setSortDescriptors:sorters];
     
     NSArray *result = [context executeFetchRequest:request error:&error];
     self.employees = [NSArray arrayWithArray:result];
@@ -57,7 +76,7 @@
     
     [cell.employeeNumber setText:employee.number];
     [cell.employeeName setText:employee.name];
-    [cell.departmentName setText:employee.departmentName];
+    [cell.departmentName setText:employee.department.name];
     
     return cell;
 }

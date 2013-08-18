@@ -1,5 +1,5 @@
 //
-//  ManpowerDepartmentTableViewController.m
+//  ManpowerDepartmentViewController.m
 //  Manpower
 //
 //  Created by Hongcheol Park on 8/17/13.
@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 
-    [self searchAll];
+    [self searchAllAndSort];
 }
 
 - (void)searchAll {
@@ -30,7 +30,26 @@
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Department" inManagedObjectContext:context];
+    
     [request setEntity:entity];
+    
+    NSArray *result = [context executeFetchRequest:request error:&error];
+    self.departments = [NSArray arrayWithArray:result];
+}
+
+- (void)searchAllAndSort {
+    ManpowerAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSError *error;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Department" inManagedObjectContext:context];
+    
+    NSSortDescriptor *numberSort = [[NSSortDescriptor alloc] initWithKey:@"number" ascending:YES];
+    NSArray *sorters = [NSArray arrayWithObject:numberSort];
+    
+    [request setEntity:entity];
+    [request setSortDescriptors:sorters];
     
     NSArray *result = [context executeFetchRequest:request error:&error];
     self.departments = [NSArray arrayWithArray:result];

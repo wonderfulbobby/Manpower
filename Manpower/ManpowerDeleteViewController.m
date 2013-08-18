@@ -67,6 +67,8 @@
             [self.resultTextView setText:resultContent];
         }
     }
+    
+    [context save:&error];
 }
 
 - (IBAction)changedEntityType:(id)sender {

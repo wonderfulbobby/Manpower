@@ -14,7 +14,6 @@
 @interface Employee : NSManagedObject
 
 @property (nonatomic, retain) NSString * number;
-@property (nonatomic, retain) NSString * departmentName;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) Department *department;
 
