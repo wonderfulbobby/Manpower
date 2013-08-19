@@ -96,7 +96,7 @@
     
     if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
         NSManagedObjectModel *mom = [appDelegate managedObjectModel];
-        NSDictionary *substitutionDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"NAME", self.departmentNameForEmployee.text, nil];
+        NSDictionary *substitutionDictionary = [NSDictionary dictionaryWithObject:self.departmentNameForEmployee.text forKey:@"NAME"];
         NSFetchRequest *request = [mom fetchRequestFromTemplateWithName:@"SomeDepartment" substitutionVariables:substitutionDictionary];
         
         NSArray *result = [context executeFetchRequest:request error:&error];

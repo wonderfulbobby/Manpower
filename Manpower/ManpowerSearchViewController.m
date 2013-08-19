@@ -43,8 +43,8 @@
             NSString *resultContent = [NSString stringWithFormat:@"사원번호 : %@\n사원이름 : %@\n부서이름 : %@", employee.number, employee.name, employee.department.name];
             [self.resultTextView setText:resultContent];
         } else {
-            NSString *resultContent = @"데이터가 존재하지 않습니다.";
-            [self.resultTextView setText:resultContent];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"데이터가 존재하지 않습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
         }
     } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -61,8 +61,8 @@
             NSString *resultContent = [NSString stringWithFormat:@"부서번호 : %@\n부서이름 : %@", department.number, department.name];
             [self.resultTextView setText:resultContent];
         } else {
-            NSString *resultContent = @"데이터가 존재하지 않습니다.";
-            [self.resultTextView setText:resultContent];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"데이터가 존재하지 않습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
         }
     }
 }

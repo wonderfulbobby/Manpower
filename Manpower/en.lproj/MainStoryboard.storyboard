@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b53-wE-jza">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b53-wE-jza">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -263,33 +263,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-72-7sY">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="isG-yK-qd2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rTz-zF-Dqy" firstAttribute="top" secondItem="iFi-LA-dCK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5jB-ZP-sBm"/>
                             <constraint firstAttribute="trailing" secondItem="Ijx-P7-iUy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JvH-In-ZXp"/>
-                            <constraint firstItem="eE1-72-7sY" firstAttribute="centerX" secondItem="bUg-vQ-Dbi" secondAttribute="centerX" type="default" id="U2b-dY-xZI"/>
-                            <constraint firstItem="eE1-72-7sY" firstAttribute="leading" secondItem="rTz-zF-Dqy" secondAttribute="leading" type="default" id="U84-yS-MXe"/>
-                            <constraint firstItem="eE1-72-7sY" firstAttribute="trailing" secondItem="rTz-zF-Dqy" secondAttribute="trailing" type="default" id="WaJ-sD-ed9"/>
+                            <constraint firstItem="rTz-zF-Dqy" firstAttribute="leading" secondItem="bUg-vQ-Dbi" secondAttribute="leading" constant="65" id="M2S-8P-voZ"/>
                             <constraint firstItem="iFi-LA-dCK" firstAttribute="top" secondItem="bUg-vQ-Dbi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cnk-MG-z9W"/>
                             <constraint firstItem="rTz-zF-Dqy" firstAttribute="centerX" secondItem="iFi-LA-dCK" secondAttribute="centerX" type="default" id="eQI-Vn-ObJ"/>
                             <constraint firstItem="Ijx-P7-iUy" firstAttribute="top" secondItem="bUg-vQ-Dbi" secondAttribute="top" constant="20" symbolic="YES" type="default" id="f7B-Qz-85O"/>
-                            <constraint firstItem="eE1-72-7sY" firstAttribute="top" secondItem="rTz-zF-Dqy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="s6f-ZL-LBd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="삭제" id="AXX-e5-ujn"/>
                     <connections>
                         <outlet property="deleteButton" destination="Ijx-P7-iUy" id="tYd-cg-Vfi"/>
                         <outlet property="entityType" destination="iFi-LA-dCK" id="icd-Q9-4aK"/>
-                        <outlet property="resultTextView" destination="eE1-72-7sY" id="ef9-6e-M5l"/>
                         <outlet property="targetText" destination="rTz-zF-Dqy" id="yL4-aA-BVC"/>
                     </connections>
                 </viewController>

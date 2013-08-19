@@ -41,11 +41,11 @@
         if ([result count] > 0) {
             Employee *employee = [result objectAtIndex:0];
             [context deleteObject:employee];
-            NSString *resultContent = @"삭제되었습니다.";
-            [self.resultTextView setText:resultContent];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"삭제되었습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
         } else {
-            NSString *resultContent = @"데이터가 존재하지 않습니다.";
-            [self.resultTextView setText:resultContent];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"데이터가 존재하지 않습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
         }
     } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -60,11 +60,11 @@
         if ([result count] > 0) {
             Department *department = [result objectAtIndex:0];
             [context deleteObject:department];
-            NSString *resultContent = @"삭제되었습니다.";
-            [self.resultTextView setText:resultContent];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"삭제되었습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
         } else {
-            NSString *resultContent = @"데이터가 존재하지 않습니다.";
-            [self.resultTextView setText:resultContent];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"데이터가 존재하지 않습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
         }
     }
     

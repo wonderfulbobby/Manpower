@@ -14,7 +14,6 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *entityType;
 @property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 @property (strong, nonatomic) IBOutlet UITextField *targetText;
-@property (strong, nonatomic) IBOutlet UITextView *resultTextView;
 
 - (IBAction)remove:(id)sender;
 - (IBAction)changedEntityType:(id)sender;
