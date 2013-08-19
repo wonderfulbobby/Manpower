@@ -14,14 +14,6 @@
 
 @implementation ManpowerAddViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -60,10 +52,11 @@
     [departmentNameForEmployee setBorderStyle:UITextBorderStyleRoundedRect];
     
     [self.view addSubview:employeeNumberLabel];
-    [self.view addSubview:employeeNumber];
     [self.view addSubview:employeeNameLabel];
-    [self.view addSubview:employeeName];
     [self.view addSubview:departmentNameforEmployeeLabel];
+    
+    [self.view addSubview:employeeNumber];
+    [self.view addSubview:employeeName];
     [self.view addSubview:departmentNameForEmployee];
     
     self.employeeNumber = employeeNumber;
@@ -87,8 +80,9 @@
     [departmentName setBorderStyle:UITextBorderStyleRoundedRect];
     
     [self.view addSubview:departmentNumberLabel];
-    [self.view addSubview:departmentNumber];
     [self.view addSubview:departmentNameLabel];
+    
+    [self.view addSubview:departmentNumber];
     [self.view addSubview:departmentName];
     
     self.departmentNumber = departmentNumber;
@@ -101,10 +95,25 @@
     NSError *error;
     
     if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeEmployee) {
-        Employee *newEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
-        [newEmployee setNumber:self.employeeNumber.text];
-        [newEmployee setName:self.employeeName.text];
-        [newEmployee setDepartmentName:self.departmentNameForEmployee.text];
+        NSManagedObjectModel *mom = [appDelegate managedObjectModel];
+        NSDictionary *substitutionDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"NAME", self.departmentNameForEmployee.text, nil];
+        NSFetchRequest *request = [mom fetchRequestFromTemplateWithName:@"SomeDepartment" substitutionVariables:substitutionDictionary];
+        
+        NSArray *result = [context executeFetchRequest:request error:&error];
+        
+        if ([result count] > 0) {
+            Department *department = [result objectAtIndex:0];
+            
+            Employee *newEmployee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
+            [newEmployee setNumber:self.employeeNumber.text];
+            [newEmployee setName:self.employeeName.text];
+            [newEmployee setDepartment:department];
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"존재하지 않는 부서입니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
+            [alertView show];
+            
+            return;
+        }
     } else if (self.entityType.selectedSegmentIndex == ManpowerEntityTypeDepartment) {
         Department *newDepartment = [NSEntityDescription insertNewObjectForEntityForName:@"Department" inManagedObjectContext:context];
         [newDepartment setNumber:self.departmentNumber.text];
@@ -115,8 +124,6 @@
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Manpower" message:@"추가되었습니다." delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil];
     [alertView show];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)changedEntityType:(id)sender {    

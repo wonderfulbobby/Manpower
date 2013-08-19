@@ -13,7 +13,6 @@
 @implementation Employee
 
 @dynamic number;
-@dynamic departmentName;
 @dynamic name;
 @dynamic department;
 

@@ -14,15 +14,6 @@
 
 @implementation ManpowerDeleteViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -76,6 +67,8 @@
             [self.resultTextView setText:resultContent];
         }
     }
+    
+    [context save:&error];
 }
 
 - (IBAction)changedEntityType:(id)sender {
