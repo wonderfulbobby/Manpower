@@ -8,11 +8,9 @@
 
 #import "Department.h"
 
-
 @implementation Department
 
 @dynamic number;
 @dynamic name;
-@dynamic employee;
 
 @end

@@ -9,12 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Employee;
-
 @interface Department : NSManagedObject
 
 @property (nonatomic, retain) NSString * number;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) Employee *employee;
 
 @end
