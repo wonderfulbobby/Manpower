@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     [self searchAll];
+//    [self searchAllAndSort];
 }
 
 - (void)searchAll {
@@ -79,6 +80,36 @@
     [cell.departmentName setText:employee.department.name];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 40)];
+    
+    UILabel *employeeNumber = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width / 3, headerView.frame.size.height)];
+    [employeeNumber setText:@"사원번호"];
+    [employeeNumber setTextAlignment:NSTextAlignmentCenter];
+    [employeeNumber setBackgroundColor:[UIColor grayColor]];
+    [headerView addSubview:employeeNumber];
+    
+    UILabel *employeeName = [[UILabel alloc] initWithFrame:CGRectMake(headerView.frame.size.width / 3 - 1, 0, headerView.frame.size.width / 3 + 2, headerView.frame.size.height)];
+    [employeeName setText:@"사원이름"];
+    [employeeName setTextAlignment:NSTextAlignmentCenter];
+    [employeeName setBackgroundColor:[UIColor grayColor]];
+    [headerView addSubview:employeeName];
+    
+    UILabel *departmentName = [[UILabel alloc] initWithFrame:CGRectMake(headerView.frame.size.width / 3 * 2, 0, headerView.frame.size.width / 3, headerView.frame.size.height)];
+    [departmentName setText:@"부서이름"];
+    [departmentName setTextAlignment:NSTextAlignmentCenter];
+    [departmentName setBackgroundColor:[UIColor grayColor]];
+    [headerView addSubview:departmentName];
+    
+    return headerView;
 }
 
 @end
